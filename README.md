@@ -1,5 +1,5 @@
 # Contrained-Convolutional-Neural-Networks
-A keras implementation of the paper "Constrained Convolutional Neural Networks: A New Approach Towards General Purpose Image Manipulation Detection"  
+A keras implementation of the publication "Constrained Convolutional Neural Networks: A New Approach Towards General Purpose Image Manipulation Detection" on IEEE Transactions on Information Forensics and Security, volume 13. This code was written by reading the paper, the authors do mention that they released some source code, but I wanted to implement it on my own, so I haven't looked at it. Therefore, it is not guaranteed that this code is one hundred percent accurate.     
 
 Tested on keras 2.1.2 with Tensorflow 1.4.0 as backend.
 
