@@ -89,3 +89,40 @@ def constrainLayer(weights):
     return weights
 
 #        -----------------Create the model-----------------
+
+inputs = Input(shape=(256,256,1))
+x = Conv2D(3, (5,5), strides=1)(inputs)              # Constrained Conv
+                                                     # No activation is performed on this layer,  
+                                                     # like it is described in the paper.
+x = Conv2D(96, (7,7), strides=2,padding='same')(x)   # Conv 2
+x = BatchNormalization()(x)                         
+x = Activation('tanh')(x)                           
+x = MaxPooling2D(pool_size=(3,3), strides=2, padding='same')(x)
+
+x = Conv2D(64, (5,5), strides=1, padding='same')(x)  # Conv 3
+x = BatchNormalization()(x)
+x = Activation('tanh')(x)
+x = MaxPooling2D(pool_size=(3,3), strides=2,)(x)
+
+x = Conv2D(64, (5,5), strides=1, padding='same')(x)   # Conv 4
+x = BatchNormalization()(x)
+x = Activation('tanh')(x)
+x = MaxPooling2D(pool_size=(3,3), strides=2,)(x)
+
+x = Conv2D(128, (1,1), strides=1, padding='same')(x)  # Conv 5
+x = BatchNormalization()(x)
+x = Activation('tanh')(x)
+x = AveragePooling2D(pool_size=(3,3), strides=2,)(x)
+
+x = Flatten()(x)
+
+x = Dense(100)(x)                            # Fully Connected Layer 1
+x = Activation('tanh')(x) 
+x = Dense(100)(x)                            # Fully Connected Layer 2
+x = Activation('tanh')(x)
+x = Dense(2, activation='softmax')(x)        # Fully Connected Layer 3
+
+model = Model(inputs,x)
+model.summary()
+
+#         ---------------------------------------------------
