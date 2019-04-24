@@ -126,3 +126,18 @@ model = Model(inputs,x)
 model.summary()
 
 #         ---------------------------------------------------
+
+# The standart Stohastic Gradient Descent is chosen as the optimizer.
+# I think the optimizer is not specified in the paper, but other
+# optimizers should be put to test as well, like the Nesterov 
+# Accelerated Gradient. The Adam and RMSProp are mostly used for 
+# deeper neural networks.
+# Categorical Crossentropy is selected as the Loss Function, but it
+# would be best to test performance of other ways to calculate the loss
+# as well. Momentum, learning rate, and decay values are taken 
+# straight from the paper.
+sgd = SGD(lr=0.001, momentum=0.95, decay=0.0005)
+model.compile(
+    optimizer=sgd, 
+    loss='categorical_crossentropy', 
+    metrics=['accuracy'])
