@@ -141,3 +141,24 @@ model.compile(
     optimizer=sgd, 
     loss='categorical_crossentropy', 
     metrics=['accuracy'])
+
+img_height = 256
+img_width = 256
+batch_size=64
+
+# Load the training and validation datasets
+train_data_gen = ImageDataGenerator(preprocessing_function=None,
+    rescale=1./255, horizontal_flip=True, vertical_flip=True)
+
+validation_data_gen = ImageDataGenerator(preprocessing_function=None,
+    rescale=1./255)
+
+train_generator = train_data_gen.flow_from_directory(
+    directory=r"./data/train_data/",
+    target_size=(img_width, img_height), color_mode='grayscale',
+    batch_size=batch_size, class_mode="categorical", shuffle=True)
+
+validation_generator = validation_data_gen.flow_from_directory(
+    directory=r"./data/validation_data/",
+    target_size=(img_width, img_height), color_mode='grayscale',
+    batch_size=batch_size, class_mode="categorical", shuffle=True)
