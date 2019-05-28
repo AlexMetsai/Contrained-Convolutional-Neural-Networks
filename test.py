@@ -44,3 +44,13 @@ model.compile(
     optimizer=sgd, 
     loss='binary_crossentropy', 
     metrics=['accuracy'])
+
+# Create the Generator
+test_data_gen = ImageDataGenerator(preprocessing_function=None,
+    rescale=1./255)#RESCALE? 
+
+# Read the data from the given directory.
+test_generator = test_data_gen.flow_from_directory(
+  directory = os.path.join('./test/', video_folders[i]),
+  target_size=(img_width, img_height), color_mode='grayscale',
+  batch_size=batch_size, class_mode="categorical")
