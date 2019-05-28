@@ -30,4 +30,17 @@ if len(sys.argv)==1:
 args = parser.parse_args()
 path = args.path
 
+# Define image and batch size
+img_height = 256        # CHanged image size!!!
+img_width = 256
+batch_size=64
 
+# Load and Compile the model
+model = load_model(path)
+
+sgd = SGD(lr=0.001, momentum=0.95, decay=0.0004)
+
+model.compile(
+    optimizer=sgd, 
+    loss='binary_crossentropy', 
+    metrics=['accuracy'])
