@@ -31,7 +31,7 @@ args = parser.parse_args()
 path = args.path
 
 # Define image and batch size
-img_height = 256        # CHanged image size!!!
+img_height = 256
 img_width = 256
 batch_size=64
 
@@ -49,8 +49,17 @@ model.compile(
 test_data_gen = ImageDataGenerator(preprocessing_function=None,
     rescale=1./255)#RESCALE? 
 
-# Read the data from the given directory.
+# Read the positive test samples.
 test_generator = test_data_gen.flow_from_directory(
-  directory = os.path.join('./test/', video_folders[i]),
+  directory = os.path.join('./test/pos', video_folders[i]),
   target_size=(img_width, img_height), color_mode='grayscale',
   batch_size=batch_size, class_mode="categorical")
+
+# Make predictions for the positive samples.
+predictions = model.predict_generator(test_generator)
+true_pos = 0
+pos_size = len(predictions)
+
+for i in range(po_size):
+    if (predictions > 0.5):
+        true_pos += 1
