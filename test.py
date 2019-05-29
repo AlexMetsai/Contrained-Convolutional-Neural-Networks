@@ -60,6 +60,21 @@ predictions = model.predict_generator(test_generator)
 true_pos = 0
 pos_size = len(predictions)
 
-for i in range(po_size):
+for i in range(pos_size):
     if (predictions > 0.5):
         true_pos += 1
+
+# Read the negative test samples.
+test_generator = test_data_gen.flow_from_directory(
+  directory = os.path.join('./test/neg', video_folders[i]),
+  target_size=(img_width, img_height), color_mode='grayscale',
+  batch_size=batch_size, class_mode="categorical")
+
+# Make predictions for the negative samples.
+predictions = model.predict_generator(test_generator)
+true_neg = 0
+neg_size = len(predictions)
+
+for i in range(neg_size):
+    if (predictions > 0.5):
+        true_neg += 1
