@@ -78,3 +78,9 @@ neg_size = len(predictions)
 for i in range(neg_size):
     if (predictions > 0.5):
         true_neg += 1
+
+accuracy = true_pos + true_neg
+
+print("Total percentage of correct guesses (accuracy): ", accuracy)
+print("True positives: ", true_pos)
+print("True negatives: ", true_neg)
