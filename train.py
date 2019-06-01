@@ -1,9 +1,11 @@
-# Alexandros I. Metsai
-# alexmetsai@gmail.com
-# MIT License
+'''
+Alexandros I. Metsai
+alexmetsai@gmail.com
+MIT License
 
-# This version is close to the original method.
-# Modified version should mention architecture changes.
+This version is close to the original method.
+Modified version should mention architecture changes.
+'''
 
 import keras
 from keras.layers import Input, Dense, Conv2D, Conv3D, Reshape, \
