@@ -1,8 +1,10 @@
-# Alexandros I. Metsai
-# alexmetsai@gmail.com
-# MIT License
+'' '
+Alexandros I. Metsai
+alexmetsai@gmail.com
+MIT License
 
-# Test the accuracy of the contrained convolutional neural network.
+Test the accuracy of the contrained convolutional neural network.
+'''
 
 import keras
 from keras.models import load_model
