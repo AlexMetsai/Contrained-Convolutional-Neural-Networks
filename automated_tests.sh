@@ -13,3 +13,4 @@ FOLDER="saved_model/"
 LOG_FOLDER="logs/"
 
 # Create an array containing the index of each epoch (i.e. weights.10.h5) 
+declare -a MODEL_LIST
