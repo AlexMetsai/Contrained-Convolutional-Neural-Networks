@@ -11,3 +11,5 @@ FOLDER="saved_model/"
 
 # An already existing folder, where results will be moved to.
 LOG_FOLDER="logs/"
+
+# Create an array containing the index of each epoch (i.e. weights.10.h5) 
