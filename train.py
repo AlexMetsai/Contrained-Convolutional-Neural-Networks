@@ -169,3 +169,7 @@ validation_generator = validation_data_gen.flow_from_directory(
 callbacks = [ModelCheckpoint('./saved_model/weights.{epoch:02d}.h5',
     monitor='acc',verbose=1, save_best_only=False,
     period=1), ConstrainLayer()]
+
+history = model.fit_generator(generator=train_generator, epochs=50, 
+     callbacks=callbacks)  #removed validation data
+#           ------------------------------------------
