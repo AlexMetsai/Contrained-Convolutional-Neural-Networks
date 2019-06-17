@@ -164,3 +164,8 @@ validation_generator = validation_data_gen.flow_from_directory(
     directory=r"./data/validation_data/",
     target_size=(img_width, img_height), color_mode='grayscale',
     batch_size=batch_size, class_mode="categorical", shuffle=True)
+
+#           ------------ Train the Model ------------
+callbacks = [ModelCheckpoint('./saved_model/weights.{epoch:02d}.h5',
+    monitor='acc',verbose=1, save_best_only=False,
+    period=1), ConstrainLayer()]
