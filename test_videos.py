@@ -16,3 +16,8 @@ parser.add_argument(
     '--path',
     type=str,
     help="Path of the network's weights")
+
+# Display help if no arguments are given
+if len(sys.argv)==1:
+    parser.print_help(sys.stderr)
+    sys.exit(1)
