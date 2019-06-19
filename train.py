@@ -178,3 +178,8 @@ history = model.fit_generator(generator=train_generator, epochs=50,
 # Trees Classifier" used to extract the 1x200 vector which contains
 # the Deep Convolutional Features. It is reported that this provides
 # a small improvement in the model's accuracy.
+
+# This line makes sure that the program exits successfully every time.
+# It deals with the "Exception ignored in BaseSession" bug. Not of 
+# importance anyway.
+import gc; gc.collect()
