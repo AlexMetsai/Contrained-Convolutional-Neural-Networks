@@ -8,3 +8,11 @@ network based on predictions of video frame images.
 A threshold value is used to make the 
 decision for the overall classification.
 '''
+
+# Set argument parser
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-p',
+    '--path',
+    type=str,
+    help="Path of the network's weights")
