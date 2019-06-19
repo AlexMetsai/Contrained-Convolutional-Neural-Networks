@@ -176,4 +176,5 @@ history = model.fit_generator(generator=train_generator, epochs=50,
 
 # Next thing that could be implemented is the 'Extremely Randomized 
 # Trees Classifier" used to extract the 1x200 vector which contains
-# the Deep Convolutional Features.
+# the Deep Convolutional Features. It is reported that this provides
+# a small improvement in the model's accuracy.
