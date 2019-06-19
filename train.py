@@ -173,3 +173,7 @@ callbacks = [ModelCheckpoint('./saved_model/weights.{epoch:02d}.h5',
 history = model.fit_generator(generator=train_generator, epochs=50, 
      callbacks=callbacks)  #removed validation data
 #           ------------------------------------------
+
+# Next thing that could be implemented is the 'Extremely Randomized 
+# Trees Classifier" used to extract the 1x200 vector which contains
+# the Deep Convolutional Features.
