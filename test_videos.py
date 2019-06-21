@@ -33,3 +33,11 @@ batch_size=64
 
 # Percentage of tampered frames to classify video as fake.
 detection_threshold = 0.5
+
+# Load and Compile the model
+model = load_model(path)
+sgd = SGD(lr=0.001, momentum=0.95, decay=0.0004)
+model.compile(
+    optimizer=sgd, 
+    loss='binary_crossentropy', 
+    metrics=['accuracy'])
