@@ -21,3 +21,15 @@ parser.add_argument(
 if len(sys.argv)==1:
     parser.print_help(sys.stderr)
     sys.exit(1)
+
+# Folder path to weights
+args = parser.parse_args()
+path = args.path
+
+# Define image and batch size
+img_height = 256        # CHanged image size!!!
+img_width = 256
+batch_size=64
+
+# Percentage of tampered frames to classify video as fake.
+detection_threshold = 0.5
