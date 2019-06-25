@@ -8,6 +8,13 @@ network based on predictions of video frame images.
 A threshold value is used to make the 
 decision for the overall classification.
 '''
+import os
+import sys
+import numpy as np
+import argparse
+from keras.models import load_model
+from keras.preprocessing.image import ImageDataGenerator
+from keras.optimizers import SGD
 
 # Set argument parser
 parser = argparse.ArgumentParser()
