@@ -45,3 +45,11 @@ model.compile(
 # Create the Generator
 test_data_gen = ImageDataGenerator(preprocessing_function=None,
     rescale=1./255)
+
+# ****************************
+# *** Test negative videos ***
+# ****************************
+video_folders = os.listdir('./test/negative')
+
+# Make video-level prediction
+correct_guesses = 0
