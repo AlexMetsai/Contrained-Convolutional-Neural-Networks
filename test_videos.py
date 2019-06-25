@@ -58,4 +58,10 @@ correct_guesses = 0
 
 for i in range(len(video_folders)):
     
+    print(video_folders[i])
+    
     # Read the data from directory
+    test_generator = test_data_gen.flow_from_directory(
+        directory = os.path.join(negative_data_dir, video_folders[i]),
+        target_size=(img_width, img_height), color_mode='grayscale',
+        batch_size=batch_size, class_mode="categorical")
