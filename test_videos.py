@@ -41,3 +41,7 @@ model.compile(
     optimizer=sgd, 
     loss='binary_crossentropy', 
     metrics=['accuracy'])
+
+# Create the Generator
+test_data_gen = ImageDataGenerator(preprocessing_function=None,
+    rescale=1./255)
