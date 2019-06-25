@@ -29,7 +29,9 @@ path = args.path
 # Define image and batch size
 img_height = 256        # CHanged image size!!!
 img_width = 256
-batch_size=64
+batch_size = 64
+
+negative_data_dir = './test/negative'
 
 # Percentage of tampered frames to classify video as fake.
 detection_threshold = 0.5
@@ -49,7 +51,11 @@ test_data_gen = ImageDataGenerator(preprocessing_function=None,
 # ****************************
 # *** Test negative videos ***
 # ****************************
-video_folders = os.listdir('./test/negative')
+video_folders = os.listdir(negative_data_dir)
 
 # Make video-level prediction
 correct_guesses = 0
+
+for i in range(len(video_folders)):
+    
+    # Read the data from directory
