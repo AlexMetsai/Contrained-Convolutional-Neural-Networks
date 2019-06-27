@@ -16,7 +16,7 @@ from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
 
-# Set argument parser
+# Set argument parser.
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '-p',
@@ -24,17 +24,19 @@ parser.add_argument(
     type=str,
     help="Path of the network's weights")
 
-# Display help if no arguments are given
+# Display help if no arguments are given.
 if len(sys.argv)==1:
     parser.print_help(sys.stderr)
     sys.exit(1)
 
-# Folder path to weights
+# Folder path to weights.
 args = parser.parse_args()
 path = args.path
 
-# Define image and batch size
-img_height = 256        # CHanged image size!!!
+# Define image and batch size.
+# An error will be displayed if dimensions don't match
+# with the ones specified in the training process.
+img_height = 256
 img_width = 256
 batch_size = 64
 
