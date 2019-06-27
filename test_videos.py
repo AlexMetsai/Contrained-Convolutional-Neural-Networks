@@ -76,3 +76,5 @@ for i in range(len(video_folders)):
     # Make predictions for each frame
     predictions = model.predict_generator(test_generator)
     prediction_acc = 0
+    for i in range(len(predictions)):
+        prediction_acc += (predictions[i]/(len(predictions)))
