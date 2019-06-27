@@ -72,3 +72,7 @@ for i in range(len(video_folders)):
         directory = os.path.join(negative_data_dir, video_folders[i]),
         target_size=(img_width, img_height), color_mode='grayscale',
         batch_size=batch_size, class_mode="categorical")
+    
+    # Make predictions for each frame
+    predictions = model.predict_generator(test_generator)
+    prediction_acc = 0
