@@ -86,6 +86,9 @@ for i in range(len(video_folders)):
     
     print(prediction_acc)
 
+correct_guesses_neg = correct_guesses
+negative_len = len(video_folders)
+
 # ****************************
 # *** Test positive videos ***
 # ****************************
