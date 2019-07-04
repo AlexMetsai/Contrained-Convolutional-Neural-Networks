@@ -80,3 +80,6 @@ for i in range(len(video_folders)):
     prediction_acc = 0
     for i in range(len(predictions)):
         prediction_acc += (predictions[i]/(len(predictions)))
+    
+    if (prediction_acc[0] < detection_threshold):
+        correct_guesses += 1
