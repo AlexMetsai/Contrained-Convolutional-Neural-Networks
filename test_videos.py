@@ -41,6 +41,7 @@ img_width = 256
 batch_size = 64
 
 negative_data_dir = './test/negative'
+positive_data_dir = './test/positive'
 
 # Percentage of tampered frames to classify video as fake.
 detection_threshold = 0.5
