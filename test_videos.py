@@ -85,3 +85,8 @@ for i in range(len(video_folders)):
         correct_guesses += 1
     
     print(prediction_acc)
+
+# ****************************
+# *** Test positive videos ***
+# ****************************
+video_folders = os.listdir(positive_data_dir)
