@@ -94,3 +94,8 @@ negative_len = len(video_folders)
 # *** Test positive videos ***
 # ****************************
 video_folders = os.listdir(positive_data_dir)
+correct_guesses = 0
+# Make video-level prediction
+for i in range(len(video_folders)):
+    
+    # Read the data from directory
