@@ -113,3 +113,5 @@ for i in range(len(video_folders)):
     
     if (prediction_acc[0] > detection_threshold):
         correct_guesses += 1
+    
+    print(prediction_acc)
