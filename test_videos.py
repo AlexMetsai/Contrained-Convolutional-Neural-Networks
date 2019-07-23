@@ -120,3 +120,5 @@ print("Correct guesses of real videos",
   correct_guesses_neg, "out of", negative_len)
 print("Percentage of correct guesses for real videos:", 
   correct_guesses_neg/negative_len)
+
+# ToDo the same for positives and print whole accuracy.
