@@ -115,3 +115,5 @@ for i in range(len(video_folders)):
         correct_guesses += 1
     
     print(prediction_acc)
+print("Correct guesses of real videos", 
+  correct_guesses_world, "out of", world_len)
