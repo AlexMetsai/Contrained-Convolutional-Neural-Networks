@@ -122,6 +122,8 @@ print("Percentage of correct guesses for real videos:",
   correct_guesses_neg/negative_len)
 
 # ToDo the same for positives and print whole accuracy.
+print("Correct guesses of fake videos", 
+  correct_guesses, "out of", len(video_folders))
 
 
 import gc; gc.collect()
