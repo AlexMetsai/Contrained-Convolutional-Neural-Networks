@@ -130,5 +130,6 @@ correct_guesses_pos = correct_guesses
 pos_les = len(video_folders)
 
 # This line makes sure that the program exits successfully every time.
-
+# It deals with the "Exception ignored in BaseSession" bug. 
+# Not of importance.
 import gc; gc.collect()
