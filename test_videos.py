@@ -129,4 +129,6 @@ print("Percentage of correct guesses for fake videos:",
 correct_guesses_pos = correct_guesses
 pos_les = len(video_folders)
 
+# This line makes sure that the program exits successfully every time.
+
 import gc; gc.collect()
