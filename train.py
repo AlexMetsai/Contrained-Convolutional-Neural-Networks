@@ -4,7 +4,7 @@ alexmetsai@gmail.com
 MIT License
 
 This version is close to the original method.
-Modified version should mention architecture changes.
+Modified versions should mention architecture changes.
 '''
 
 import keras
