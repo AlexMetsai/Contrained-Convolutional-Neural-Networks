@@ -179,7 +179,7 @@ history = model.fit_generator(generator=train_generator, epochs=50,
 # the Deep Convolutional Features. It is reported that this provides
 # a small improvement in the model's accuracy.
 
-# This line makes sure that the program exits successfully every time.
-# It deals with the "Exception ignored in BaseSession" bug. Not of 
+# This following line makes sure that the program exits successfully every 
+# time. It deals with the "Exception ignored in BaseSession" bug. Not of 
 # importance anyway.
 import gc; gc.collect()
