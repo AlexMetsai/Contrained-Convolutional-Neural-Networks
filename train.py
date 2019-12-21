@@ -28,14 +28,14 @@ class ConstrainLayer(keras.callbacks.Callback, Model):
     # Utilized before each batch
 
     def on_batch_begin(self, batch, logs={}):
-            # Get the weights of the first layer
-            all_weights = model.get_weights()
-            weights = np.asarray(all_weights[0])
-            # Constrain the first layer
-            weights = constrainLayer(weights)
-            # Return the constrained weights back to the network
-            all_weights[0] = weights
-            model.set_weights(all_weights)
+        # Get the weights of the first layer
+        all_weights = model.get_weights()
+        weights = np.asarray(all_weights[0])
+        # Constrain the first layer
+        weights = constrainLayer(weights)
+        # Return the constrained weights back to the network
+        all_weights[0] = weights
+        model.set_weights(all_weights)
 
 def constrainLayer(weights):
     
