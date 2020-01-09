@@ -20,3 +20,7 @@ do
     MODEL_LIST[$i-1]="0$i"
 done
 
+for i in `seq 10 50`;
+do
+    MODEL_LIST[$i-1]="$i"
+done
