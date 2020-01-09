@@ -24,3 +24,7 @@ for i in `seq 10 50`;
 do
     MODEL_LIST[$i-1]="$i"
 done
+
+# NOT FILLED: test the model for all epochs
+# Somehow I lost the temp bash script I was using,  
+# need to re-write some minor loop code.
