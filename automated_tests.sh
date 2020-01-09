@@ -14,3 +14,9 @@ LOG_FOLDER="logs/"
 
 # Create an array containing the index of each epoch (i.e. weights.10.h5) 
 declare -a MODEL_LIST
+
+for i in `seq 1 9`;
+do
+    MODEL_LIST[$i-1]="0$i"
+done
+
