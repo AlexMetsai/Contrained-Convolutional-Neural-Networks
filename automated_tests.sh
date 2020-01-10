@@ -28,3 +28,7 @@ done
 # NOT FILLED: test the model for all epochs
 # Somehow I lost the temp bash script I was using,  
 # need to re-write some minor loop code.
+
+# Test the network for all epochs
+for i in "${MODEL_LIST[@]}"
+do  #testing
