@@ -32,3 +32,12 @@ done
 # Test the network for all epochs
 for i in "${MODEL_LIST[@]}"
 do  #testing
+    
+    # Location of the trained model weights.
+    FILE="weights.$i.h5"
+    
+    # Specify the file to store the output to
+    #TODO
+    
+    # Execute and output to log file.
+    
