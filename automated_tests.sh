@@ -40,3 +40,5 @@ do  #testing
     python test_constrained_conv.py "--path=$FOLDER$FILE" > "$FOLDER$LOG_FOLDER$LOG"
 
 done
+
+# If needed, the FOLDER's value can be made passable through a shell argument.
