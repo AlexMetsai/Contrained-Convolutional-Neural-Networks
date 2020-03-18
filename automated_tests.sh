@@ -37,7 +37,7 @@ do  #testing
     FILE="weights.$i.h5"
     
     # Specify the file to store the output to
-    #TODO
+    LOG="$FOLDERlog_$FILE.txt"
     
     # Execute and output to log file.
     
