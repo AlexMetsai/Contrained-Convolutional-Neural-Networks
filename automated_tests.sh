@@ -40,4 +40,4 @@ do  #testing
     LOG="$FOLDERlog_$FILE.txt"
     
     # Execute and output to log file.
-    
+    python test_constrained_conv.py "--path=$FOLDER$FILE" > "$FOLDER$LOG_FOLDER$LOG"
