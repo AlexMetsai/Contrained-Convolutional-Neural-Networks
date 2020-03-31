@@ -8,6 +8,7 @@ network based on predictions of video frame images.
 A threshold value is used to make the 
 decision for the overall classification.
 '''
+
 import os
 import sys
 import numpy as np
@@ -117,14 +118,14 @@ for i in range(len(video_folders)):
     print(prediction_acc)
 
 print("Correct guesses of real videos", 
-  correct_guesses_neg, "out of", negative_len)
+    correct_guesses_neg, "out of", negative_len)
 print("Percentage of correct guesses for real videos:", 
-  correct_guesses_neg/negative_len)
+    correct_guesses_neg/negative_len)
 
 print("Correct guesses of fake videos", 
-  correct_guesses, "out of", len(video_folders))
+    correct_guesses, "out of", len(video_folders))
 print("Percentage of correct guesses for fake videos:", 
-  correct_guesses/len(video_folders))
+    correct_guesses/len(video_folders))
 
 correct_guesses_pos = correct_guesses
 pos_les = len(video_folders)
@@ -132,4 +133,5 @@ pos_les = len(video_folders)
 # The following line makes sure that the program exits successfully every 
 # time. It deals with the "Exception ignored in BaseSession" bug. 
 # Not of importance.
-import gc; gc.collect()
+import gc
+gc.collect()
