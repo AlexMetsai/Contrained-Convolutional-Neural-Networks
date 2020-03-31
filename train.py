@@ -26,7 +26,6 @@ from PIL import Image
 class ConstrainLayer(keras.callbacks.Callback, Model):
     
     # Utilized before each batch
-
     def on_batch_begin(self, batch, logs={}):
         # Get the weights of the first layer
         all_weights = model.get_weights()
@@ -37,6 +36,7 @@ class ConstrainLayer(keras.callbacks.Callback, Model):
         all_weights[0] = weights
         model.set_weights(all_weights)
 
+        
 def constrainLayer(weights):
     
     # Scale by 10k to avoid numerical issues while normalizing
@@ -89,6 +89,7 @@ def constrainLayer(weights):
     weights[:,:,0,2] = filter_3
     
     return weights
+
 
 #        -----------------Create the model-----------------
 
@@ -182,4 +183,5 @@ history = model.fit_generator(generator=train_generator, epochs=50,
 # The following line makes sure that the program exits successfully every 
 # time. It deals with the "Exception ignored in BaseSession" bug. Not of 
 # importance anyway.
-import gc; gc.collect()
+import gc
+gc.collect()
