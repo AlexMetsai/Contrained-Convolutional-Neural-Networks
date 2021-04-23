@@ -16,6 +16,7 @@ import argparse
 from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
+import gc
 
 # Set argument parser.
 parser = argparse.ArgumentParser()
@@ -130,8 +131,8 @@ print("Percentage of correct guesses for fake videos:",
 correct_guesses_pos = correct_guesses
 pos_les = len(video_folders)
 
+# Manual garbage collection
 # The following line makes sure that the program exits successfully every 
 # time. It deals with the "Exception ignored in BaseSession" bug. 
 # Not of importance.
-import gc
 gc.collect()
