@@ -18,6 +18,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
 import numpy as np
 from PIL import Image
+import gc
 
 # The callback to be applied at the end of each iteration. This is 
 # used to constrain the layer's weights the same way Bayar and Stamm do
@@ -180,8 +181,8 @@ history = model.fit_generator(generator=train_generator, epochs=50,
 # the Deep Convolutional Features. It is reported that this provides
 # a small improvement in the model's accuracy.
 
+# Manual garbage collection
 # The following line makes sure that the program exits successfully every 
 # time. It deals with the "Exception ignored in BaseSession" bug. Not of 
 # importance anyway.
-import gc
 gc.collect()
