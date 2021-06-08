@@ -13,7 +13,7 @@ Belhassen Bayar and Matthew C. Stamm  (2018).
 Constrained Convolutional Neural Networks: A New Approach Towards General Purpose Image Manipulation Detection
 IEEE Transactions on Information Forensics and Security, volume 13.
 
-<a id="1">[1]</a> 
+<a id="2">[2]</a> 
 Belhassen Bayar and Matthew C. Stamm  (2016). 
 A deep learning approach to universal image manipulation detection using a new convolutional layer
 2016 ACM Workshop on Information Hiding and Multimedia Security
